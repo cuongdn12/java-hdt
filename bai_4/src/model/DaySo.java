@@ -42,4 +42,36 @@ public class DaySo {
         }
         return ((double) tong()) / a.length;
     }
+
+    public void min_max() {
+        int mi = Integer.MAX_VALUE, ma = Integer.MIN_VALUE;
+        for (int i : a) {
+            if (i > ma) {
+                ma = i;
+            }
+            if (i < mi) {
+                mi = i;
+            }
+        }
+        System.out.println("so be nhat: " + mi);
+        System.out.println("so lon nhat: " + ma);
+    }
+
+    private boolean isNT(int x) {
+        for (int i = 2; i <= Math.sqrt(x); i++) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void NT() {
+        for (int i : a) {
+            if (isNT(i)&& i>=2) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
 }
