@@ -6,6 +6,7 @@
 package run;
 
 import java.util.Scanner;
+import modul.fibonaci;
 import modul.soNT;
 import modul.tongChuSo;
 import modul.ucln_bcnn;
@@ -24,6 +25,7 @@ public class Menu {
         ucln_bcnn uc_bc = new ucln_bcnn();
         tongChuSo tong_chuso = new tongChuSo();
         soNT So_n = new soNT();
+        fibonaci fb= new fibonaci();
         while (true) {
             int chose;
             Scanner in = new Scanner(System.in);
@@ -32,6 +34,9 @@ public class Menu {
             System.out.println("3. Phân tích một số nguyên thành các thừa số nguyên tố");
             System.out.println("4. Liệt kê tất cả các số nguyên tố nhỏ hơn n");
             System.out.println("5. Liệt kê m số nguyên tố đầu tiên.");
+            System.out.println("6. Số Fibonacci thứ n");
+            System.out.println("7. Liệt kê tất cả các số nguyên tố có 5 chữ số sao cho tổng của các chữ số trong mỗi số nguyên tố đều bằng S");
+            System.out.println("8. Liệt kê các số Fibonaci nhỏ hơn p là số nguyên tố");
             System.out.println("0. Thoát chương trình.");
             System.out.print("Chọn từ 1->n:");
             chose = Integer.parseInt(in.nextLine());
@@ -41,7 +46,8 @@ public class Menu {
                     uc_bc.ucln_bcnn();
                     break;
                 case 2:
-                    tong_chuso.tongSo();
+                    System.out.println("tong cac chu so la: " +  tong_chuso.tongSo());
+                   
                     break;
                 case 3:
                     So_n.ptSoNT();
@@ -51,6 +57,15 @@ public class Menu {
                     break;
                 case 5:
                     So_n.nSoNT();
+                    break;
+                case 6:
+                    fb.fbn();
+                    break;
+                case 7:
+                    So_n.soNT_5cs();
+                    break;
+                case 8:
+                    So_n.nt_fb();
                     break;
                 case 0:
                     System.exit(0);

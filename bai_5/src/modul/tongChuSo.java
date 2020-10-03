@@ -15,7 +15,7 @@ public class tongChuSo {
 
     private int so;
 
-    public void tongSo() {
+    public int tongSo() {
         Scanner in = new Scanner(System.in);
         System.out.print("Nhap 1 so nguyen: ");
         so = Integer.parseInt(in.nextLine());
@@ -25,6 +25,7 @@ public class tongChuSo {
         for (String i : arr) {
             sum += Integer.parseInt(i);
         }
-        System.out.println("tong cac chu so la: " + sum);
+        
+        return sum;
     }
 }

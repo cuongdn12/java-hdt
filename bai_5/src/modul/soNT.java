@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class soNT {
 
-    private int so, n, m;
+    private int so, n, m,s, p;
 
     private boolean isNT(int x) {
         for (int i = 2; i <= Math.sqrt(x); i++) {
@@ -63,6 +63,39 @@ public class soNT {
                 dem++;
             }
             i++;
+        }
+        System.out.println();
+    }
+    private int tongCS(int x){
+        String s=String.valueOf(x);
+        String[] arr=s.split("");
+        int sum=0;
+        for (String string : arr) {
+            sum+=Integer.parseInt(string);
+        }
+        return sum;
+    }
+    public void soNT_5cs(){
+        Scanner in=new Scanner(System.in);
+        System.out.print("Nhap S: ");
+        s=Integer.parseInt(in.nextLine());
+        for (int i = 10000; i <= 99999; i++) {
+            if(isNT(i)&&(tongCS(i)==s))
+                System.out.print(i+" ");
+        }
+        System.out.println();
+    }
+    public void nt_fb(){
+        Scanner in = new Scanner(System.in);
+        System.out.print("Nhap p: ");
+        p = Integer.parseInt(in.nextLine());
+        int f0=1, f1=1, fn=0;
+        while(fn<p){
+            fn=f0+f1;
+            f0=f1;
+            f1=fn;
+            if(isNT(fn))
+                System.out.print(fn+" ");
         }
         System.out.println();
     }
