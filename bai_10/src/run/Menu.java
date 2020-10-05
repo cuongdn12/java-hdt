@@ -6,6 +6,7 @@
 package run;
 
 import java.util.Scanner;
+import module.phanSo;
 import module.thuannghich;
 import module.vohan;
 
@@ -24,11 +25,13 @@ public class Menu {
         
         vohan PI = new vohan();
         thuannghich tn=new thuannghich();
+        phanSo ps = new phanSo();
         
         while(true){
             int chose;
             System.out.println("1. Tính PI với sai số epsilon");
             System.out.println("2. Liệt kê các số thuận nghịch có  6 chữ số");
+            System.out.println("3. Nhập 2 (hoặc 3) phân số, viết ra, tổng, hiệu, tích và thương");
             System.out.println("0. Thoát chuwong trình");
             System.out.print("Chọn: ");
             chose = Integer.parseInt(in.nextLine());
@@ -39,6 +42,9 @@ public class Menu {
                     break;
                 case 2:
                     tn.lietKe();
+                    break;
+                case 3:
+                    ps.tong();
                     break;
                 case 0:
                     System.exit(0);

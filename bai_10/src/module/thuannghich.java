@@ -12,11 +12,12 @@ package module;
 public class thuannghich {
 
     public void lietKe() {
-//        for (int i = 100000; i <= 999999; i++) {
-//            if (i == Integer.reverse(i)) {
-//                System.out.print(Integer.reverse(i)+" ");
-//            }
-//        }
-        System.out.println(Integer.reverse(1234));
+        for (int i = 100000; i <= 999999; i++) {
+            String r = new StringBuffer(String.valueOf(i)).reverse().toString();
+            if (i ==  Integer.parseInt(r)){
+                System.out.print(i+" ");
+            }
+        }
+        System.out.println();
     }
 }
