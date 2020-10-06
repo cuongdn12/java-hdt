@@ -6,6 +6,7 @@
 package demo;
 
 import java.util.StringTokenizer;
+
 /**
  *
  * @author dangngoccuong
@@ -20,7 +21,7 @@ public class Demo {
 
         String hoten = "Trinh Thi Van     Anh";
         StringTokenizer a = new StringTokenizer(hoten);
-        while(a.hasMoreTokens()){
+        while (a.hasMoreTokens()) {
             System.out.println(a.nextToken());
         }
 //        String[] t = hoten.split("\\s+");
@@ -30,8 +31,7 @@ public class Demo {
 //        }
 //        email += "@ptit.edu.vn";
 //        System.out.println(email);
-        
-        
+
     }
 
 }
