@@ -28,7 +28,6 @@ public class chuanHoa {
         System.out.println("Tên là: " + ten);;
     }
 
-//    dang ngoc  , dakfja,   djasd  .
     public void doan_van() {
         Scanner in = new Scanner(System.in);
         p = in.nextLine();
@@ -38,7 +37,11 @@ public class chuanHoa {
         p = p.replaceAll("\\s?\\?\\s?", "? ");
         p = p.replaceAll("\\s?\\!\\s?", "! ");
         p =p.trim();
+        p = p.toLowerCase();
         String[] arr=p.split("(?<=[.?!][\\s?])");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
         String param="";
         int so_cau = arr.length, so_tu=0;
         for (String string : arr) {
